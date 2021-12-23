@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <title>HTML Academy: Пинк</title>
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img src="img/logotype-mobile.svg" width="74" height="23" alt="Приложение " Пинк"">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
+            <a href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="catalog.html">
+              Фотографии
+            </a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="form.html">
+              Конкурс
+            </a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="promo">
+              HTML Academy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="page-main__header">Конкурс на самое<br>безбашенное<br>путешествие с Пинк</h1>
+    <h2 class="page-main__intro">Поделитесь своей историей и получите<br>шанс выиграть ценный приз — 1000<br>миль на
+      вашу бонусную карту!</h2>
+    <section class="registration-data">
+      <h3 class="registration-data__title">Фамилия:</h3>
+      <input class="registration-data__second-name" placeholder="Укажите фамилию *" type="second-name"
+        name="second-name" id="second-name" required>
+      <h3 class="registration-data__title">Имя:</h3>
+      <input class="registration-data__first-name" placeholder="Введите ваше имя *" type="first-name" name="first-name"
+        id="first-name" required>
+      <h3 class="registration-data__title">Отчество:</h3>
+      <input class="registration-data__patronymic" placeholder="Ну и отчество тоже" type="patronymic" name="patronymic"
+        id="patronymic" required>
+    </section>
+    <section class="achievements">
+      <h3 class="achievements__title">Ваши безбашенные<br>достижения в путешествии</h3>
+      <ul class="achievements__check-list">
+        <li class="achievements__check-list--item">
+          <div>
+            <input type="checkbox" id="shark" name="shark" checked>
+            <label for="shark">Сделал селфи с акулой</label>
+          </div>
+        </li>
+        <li class="achievements__check-list--item">
+          <div>
+            <input type="checkbox" id="beach" name="beach" checked>
+            <label for="beach">Обгорел на пляже</label>
+          </div>
+        </li>
+        <li class="achievements__check-list--item">
+          <div>
+            <input type="checkbox" id="chuck" name="chuck">
+            <label for="chuck">Видел Чака Норриса</label>
+          </div>
+        </li>
+        <li class="achievements__check-list--item">
+          <div>
+            <input type="checkbox" id="souvenirs" name="souvenirs">
+            <label for="souvenirs">Накупил сувениров</label>
+          </div>
+        </li>
+        <li class="achievements__check-list--item">
+          <div>
+            <input type="checkbox" id="tower" name="tower" checked>
+            <label for="tower">Удержал башню</label>
+          </div>
+        </li>
+        <li class="achievements__check-list--item">
+          <div>
+            <input type="checkbox" id="hotel" name="hotel">
+            <label for="hotel">Разгромил отель</label>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="registration-data">
+      <h3 class="registration-data__title">Номер телефона:</h3>
+      <input class="registration-data__user-telephone" placeholder="Номер, пожалуйста" type="number" name="number"
+        id="number" required>
+      <h3 class="registration-data__title">Адрес почты:</h3>
+      <input class="registration-data__e-mail" placeholder="Введите почту *" type="e-mail" name="e-mail" id="e-mail"
+        required>
+    </section>
+    <section class="os-choice">
+      <h3 class="os-choice__header">С каким приложением<br>путешествовали?</h3>
+      <form>
+        <div>
+          <input type="radio" id="ios" name="os" value="ios">
+          <label for="ios">Pink для iOS</label>
+
+          <input type="radio" id="android" name="os" value="android">
+          <label for="android">Pink на Android</label>
+
+          <input type="radio" id="windows" name="os" value="windows">
+          <label for="windows">Windows Phone</label>
+        </div>
+      </form>
+    </section>
+    <section class="registration-data">
+      <h3 class="registration-data__title">Опишите свои эмоции:</h3>
+      <form class="registration-data__comment">
+        <textarea rows="4" cols="300" name="comment"
+          form="usrform">Можно прям в красках, не стесняясь в выражениях</textarea>
+      </form>
+    </section>
+    <button class="send button" name="button">Отправить форму</button>
+    <p class="note">* — обязательные поля</p>
+  </main>
+  <footer class="footer">
+    <div class="footer__logo-wrapper">
+      <img class="footer__logo" src="img/..">
+    </div>
+    <ul class="footer__social-list">
+      <li class="footer__social-item">
+        <a class="footer__social-link" href="#">
+          <span class="visually-hidden">Twitter</span>
+          <img class="footer__social-icon" src="img/.." alt="иконка твиттера">
+        </a>
+      </li>
+      <li class="footer__social-item">
+        <a class="footer__social-link" href="#">
+          <span class="visually-hidden">Facebook</span>
+          <img class="footer__social-icon" src="img/.." alt="иконка фейсбука">
+        </a>
+      </li>
+      <li class="footer__social-item">
+        <a class="footer__social-link" href="#">
+          <span class="visually-hidden">Youtube</span>
+          <img class="footer__social-icon" src="img/.." alt="иконка ютуба">
+        </a>
+      </li>
+    </ul>
+    <div class="footer__promo">
+      <p class="footer__promo-text">Разработано</p>
+      <img class="footer__promo-logo" src="img/.." alt="логотип академии">
+    </div>
+  </footer>
+</body>
+
+</html>
