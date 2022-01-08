@@ -3,13 +3,15 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
     <a class="page-header__logo">
-      <img src="img/logotype-mobile.svg" width="74" height="23" alt="Приложение " Пинк"">
+      <img src="img/main_page/pink.svg" alt="Приложение Пинк">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -41,9 +43,11 @@
       </div>
     </nav>
   </header>
-  <main class="page-main">
-    <h1 class="page-main__header">Конкурс на самое<br>безбашенное<br>путешествие с Пинк</h1>
-    <h2 class="page-main__intro">Поделитесь своей историей и получите<br>шанс выиграть ценный приз — 1000<br>миль на
+  <main class="form-main">
+    <div class="form-main__header-wrapper">
+      <h1 class="form-main__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </div>
+    <h2 class="form-main__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
       вашу бонусную карту!</h2>
     <section class="registration-data">
       <h3 class="registration-data__title">Фамилия:</h3>
@@ -107,56 +111,65 @@
     </section>
     <section class="os-choice">
       <h3 class="os-choice__header">С каким приложением<br>путешествовали?</h3>
-      <form>
-        <div>
+      <ul class="os-choice__list">
+        <li class="os-choice__item">
           <input type="radio" id="ios" name="os" value="ios">
           <label for="ios">Pink для iOS</label>
-
+        </li>
+        <li class="os-choice__item">
           <input type="radio" id="android" name="os" value="android">
           <label for="android">Pink на Android</label>
-
+        </li>
+        <li class="os-choice__item">
           <input type="radio" id="windows" name="os" value="windows">
           <label for="windows">Windows Phone</label>
-        </div>
-      </form>
+        </li>
+      </ul>
     </section>
-    <section class="registration-data">
-      <h3 class="registration-data__title">Опишите свои эмоции:</h3>
-      <form class="registration-data__comment">
-        <textarea rows="4" cols="300" name="comment"
+    <section class="feedback">
+      <h3 class="feedback-header">Опишите свои эмоции:</h3>
+      <form class="feedback__comment">
+        <textarea rows="4" cols="300" name="comment" id="feedback-field"
           form="usrform">Можно прям в красках, не стесняясь в выражениях</textarea>
       </form>
     </section>
-    <button class="send button" name="button">Отправить форму</button>
-    <p class="note">* — обязательные поля</p>
+    <div class="send-wrapper">
+      <button class="send button" name="button">Отправить форму</button>
+    </div>
+    <div class="note-wrapper">
+      <p class="note">*
+      <p class="inner-note">&nbsp;— обязательные поля</p>
+      </p>
+    </div>
   </main>
   <footer class="footer">
     <div class="footer__logo-wrapper">
-      <img class="footer__logo" src="img/..">
+      <img class="footer__logo-glasses" src="img/main_page/glasses.svg">
+      <img class="footer__logo" src="img/main_page/pink-black.svg">
     </div>
     <ul class="footer__social-list">
       <li class="footer__social-item">
-        <a class="footer__social-link" href="#">
+        <a class="footer__social-link" href="https://twitter.com">
           <span class="visually-hidden">Twitter</span>
-          <img class="footer__social-icon" src="img/.." alt="иконка твиттера">
+          <img class="footer__social-icon" src="img/main_page/twitter.svg" alt="иконка твиттера">
         </a>
       </li>
       <li class="footer__social-item">
-        <a class="footer__social-link" href="#">
+        <a class="footer__social-link" href="https://facebook.com">
           <span class="visually-hidden">Facebook</span>
-          <img class="footer__social-icon" src="img/.." alt="иконка фейсбука">
+          <img class="footer__social-icon" src="img/main_page/facebook.svg" alt="иконка фейсбука">
         </a>
       </li>
       <li class="footer__social-item">
-        <a class="footer__social-link" href="#">
+        <a class="footer__social-link" href="https://youtube.com">
           <span class="visually-hidden">Youtube</span>
-          <img class="footer__social-icon" src="img/.." alt="иконка ютуба">
+          <img class="footer__social-icon" src="img/main_page/youtube.svg" alt="иконка ютуба">
         </a>
       </li>
     </ul>
     <div class="footer__promo">
       <p class="footer__promo-text">Разработано</p>
-      <img class="footer__promo-logo" src="img/.." alt="логотип академии">
+      <img class="footer__promo-logo" src="img/main_page/html-academy.svg" alt="логотип академии">
     </div>
   </footer>
 </body>

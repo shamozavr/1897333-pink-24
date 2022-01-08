@@ -1,0 +1,131 @@
+.upload {
+  background-color: @lightgrey;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.upload__photo--wrapper {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.upload__instrument-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.upload__instrument {
+  width: 280px;
+  display: flex;
+
+  :nth-child(2) {
+    order: 1;
+    flex-basis: 100%;
+  }
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 42px;
+  align-items: center;
+}
+
+.slidecontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 39px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 240px;
+  height: 2px;
+  background: #283645;
+  outline: none;
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: @white;
+  border: 2px solid @pink;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: @pink;
+}
+
+.upload-button-wrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.upload-button-post {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: @pink;
+  border: 3px solid @pink;
+  box-sizing: border-box;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 280px;
+  height: 55px;
+}
+
+.upload-button-cancel {
+  margin-top: 12px;
+  margin-bottom: 41px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #283645;
+  opacity: 0.1;
+  border: 3px solid #283645 0.1;
+  box-sizing: border-box;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 280px;
+  height: 55px;
+}
+
+.upload-button-cancel:hover {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: @pink;
+  border: 3px solid @pink;
+  box-sizing: border-box;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 280px;
+  height: 55px;
+  opacity: 1;
+}
