@@ -1,0 +1,144 @@
+.research {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 660px;
+    height: 330px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @lightgrey;
+    display: flex;
+    width: 1200px;
+    height: 429px;
+  }
+}
+
+.research-timer__tablet {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 238px;
+    height: 276px;
+    padding-top: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.research-timer__desktop {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    display: flex;
+    width: 298px;
+    height: 345px;
+    padding-top: 17px;
+  }
+}
+
+.research-title {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-top: 102px;
+    padding-left: 330px;
+    width: 168px;
+    height: 59px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-top: 115px;
+    padding-left: 500px;
+    width: 298px;
+    height: 23px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+  }
+}
+
+.research-description {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-top: 24px;
+    padding-left: 330px;
+    width: 310px;
+    height: 82px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #283645;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 500px;
+    width: 534px;
+    height: 74px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #283645;
+  }
+}
+
+.research-link {
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+    padding-left: 330px;
+    width: 226px;
+    height: 10px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+    color: @pink;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 500px;
+    width: 290px;
+    height: 13px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+    color: @pink;
+  }
+}

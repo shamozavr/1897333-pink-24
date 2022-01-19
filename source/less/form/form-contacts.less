@@ -1,0 +1,103 @@
+.form-contacts__header {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: @pink;
+    display: flex;
+    justify-content: center;
+    width: 260px;
+    height: 38px;
+    padding: 0;
+    margin-top: -18px;
+    background-color: @white;
+  }
+}
+
+.form-contacts {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 616px;
+    height: 306px;
+    border: 2px solid @grey;
+    border-radius: 1px;
+  }
+}
+
+.form-contacts__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.form-contacts__title {
+  position: relative;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: @pink;
+  padding: 0;
+  margin-left: 43px;
+}
+
+.form-contacts__telephone-wrapper,
+.form-contacts__email-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 496px;
+  }
+}
+
+.form-contacts__telephone,
+.form-contacts__email {
+  width: calc(276px - 20px);
+  height: 59px;
+  position: relative;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  display: flex;
+  color: #283645;
+  border: 2px solid @grey;
+  border-radius: 1px;
+  margin-left: 20px;
+  padding: 0 0 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 81%; /*почему*/
+    height: 55px; /*почему*/
+    margin: 0;
+  }
+}
+
+.form-contacts__phone-icon,
+.form-contacts__letter-icon {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 59px;
+    height: 59px;
+    justify-content: center;
+    align-items: center;
+    background-color: @grey;
+    margin: 0;
+    padding: 0;
+  }
+}

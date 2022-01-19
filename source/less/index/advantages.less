@@ -1,37 +1,98 @@
 .advantages {
+  position: relative;
   height: 828px;
-  background-color: @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    height: 695px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 715px;
+    justify-self: center;
+  }
+}
+
+.advantages__wrapper {
+  padding-top: 129px;
+  height: 828px;
+  position: absolute;
+  background-image: url("../../img/main_page/phone/grey-background.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/main_page/tablet/grey-background.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/main_page/desktop/grey-background.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .advantages__title {
+  margin: 0;
   position: relative;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 330px;
+    width: 310px;
+    text-align: left;
+  }
 }
 
 .advantages__description {
+  margin: 0;
+  padding-top: 24px;
+  padding-bottom: 43px;
   position: relative;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #283645;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 330px;
+    padding-right: 20px;
+    width: 310px;
+    text-align: left;
+  }
 }
 
-.advantages-phone-image__wrapper {
+.advantages-phone-image__wrapper-phone {
+  padding-top: calc(48px - 43px);
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 35px;
+    top: 450px; /*magic numbers*/
+    display: none;
+  }
+}
+
+.advantages-phone-image__wrapper-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+    position: absolute;
+    left: 20px;
+    top: 100px; /*magic numbers*/
+  }
 }

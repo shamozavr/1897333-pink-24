@@ -2,22 +2,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    height: 127px;
+    align-content: center;
+    justify-content: space-evenly;
+  }
 }
 
 .footer__logo-wrapper {
   display: flex;
   align-items: flex-end;
   margin-top: 66px;
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .footer__logo-glasses {
   margin: 0;
   padding: 0;
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .footer__logo {
   margin: 0;
   padding-left: 12px;
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.footer__logo-desktop {
+  display: none;
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .footer__social-list {
@@ -27,6 +56,11 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .footer__social-item {

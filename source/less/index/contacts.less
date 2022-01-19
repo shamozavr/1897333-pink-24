@@ -3,9 +3,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  /*не работает*/
+  @media (min-width: @tablet-width) {
+    width: 863px;
+    display: flex;
+    justify-content: center;
+    &:nth-child(3) {
+      order: 4;
+    }
+  }
 }
 
 .contacts__header {
+  padding-top: 50px;
+  padding-bottom: 45px;
   position: relative;
   width: 222px;
   height: 47px;
@@ -17,9 +36,58 @@
   align-items: center;
   text-align: center;
   color: #283645;
+
+  @media (min-width: @tablet-width) {
+    width: 370px;
+    height: 85px;
+    padding-top: 55px;
+    padding-left: 145px;
+    padding-right: 145px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #283645;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 462px;
+    height: 106px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 68px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #283645;
+    padding-top: 74px;
+  }
 }
 
-.contacts__title {
+.contacts-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 241px;
+    align-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 241px;
+    align-content: space-between;
+  }
+}
+
+.contacts-info__title {
+  padding-bottom: 13px;
   position: relative;
   font-family: "Open Sans";
   font-style: normal;
@@ -30,10 +98,11 @@
   text-align: center;
   color: #283645;
   margin: 0;
-  padding: 0;
 }
 
-.contacts__description {
+.contacts-info__description {
+  width: 211px;
+  padding-bottom: 31px;
   position: relative;
   font-family: "Open Sans";
   font-style: normal;
@@ -44,10 +113,9 @@
   text-align: center;
   color: @pink;
   margin: 0;
-  padding: 0;
 }
 
-.contacts__description a {
+.contacts-info__description a {
   text-decoration: none;
   color: @pink;
 }

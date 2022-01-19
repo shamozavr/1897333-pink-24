@@ -1,5 +1,36 @@
-.tariffs {
+.tariffs-wrapper {
   position: relative;
+  background-image: url("../../img/main_page/tablet/grey-background-tariffs.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-items: center;
+  height: 506px;
+  width: 1214px;
+
+  @media (min-width: @tablet-width) {
+    height: 534px;
+    width: 1200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/main_page/desktop/grey-background.svg");
+    background-repeat: no-repeat;
+    height: 534;
+    width: 1200px;
+  }
+}
+
+.tariffs {
+  width: 616px;
+  height: 216px;
+  @media (min-width: @tablet-width) {
+    width: 616px;
+    height: 216px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    height: 277px;
+  }
 }
 
 .tariffs__title {
@@ -14,12 +45,21 @@
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
+  color: @white;
   background: #283645;
   border: 2px solid #283645;
   border-radius: 1px 0px 0px 0px;
   margin: 0;
   padding: 0;
+  @media (min-width: @tablet-width) {
+    width: 152px;
+    height: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 233px;
+    height: 94px;
+  }
 }
 
 .tariffs__price {
@@ -29,7 +69,7 @@
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: @white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,17 +79,50 @@
 }
 
 .tariffs__option {
+  :not(:first-child) {
+  background-color: @white;
+  }
+  display: none;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
-  display: flex;
   align-items: center;
   justify-content: center;
   color: #283645;
+
+  @media (min-width: @tablet-width) {
+    &:not(:first-child) {
+      background-color: @white;
+    }
+    display: table-cell;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: table-cell;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    align-items: center;
+    color: #283645;
+  }
 }
 
 .tariffs__cell {
   text-align: center;
+}
+
+.tariffs__cell-option {
+  display: table-cell;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

@@ -4,72 +4,138 @@
   display: flex;
   flex-direction: column;
   align-content: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 511px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 940px;
+    justify-self: center;
+  }
 }
 
 .upload__photo--wrapper {
-  padding-top: 20px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+}
+
+.upload__photo-mobile {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.upload__photo-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    position: absolute;
+  }
 }
 
 .upload__instrument-wrapper {
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 320px;
+    padding-left: 350px;
+  }
 }
 
 .upload__instrument {
   width: 280px;
   display: flex;
-
-  :nth-child(2) {
-    order: 6;
-    flex-basis: 100%;
-  }
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 42px;
   align-items: center;
+  /*
+  :nth-child(2) {
+    order: 6;
+    flex-basis: 100%;
+  }
+*/
+  @media (min-width: @tablet-width) {
+    width: 253px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    /*
+    :nth-child(2) {
+      order: 1;
+    }*/
+  }
+  @media (min-width: @desktop-width) {
+    width: 380px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.slidecontainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 39px;
+.upload__instrument-crop-mobile,
+.upload__instrument-contrast-mobile,
+.upload__instrument-fill-mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
-.slider {
-  -webkit-appearance: none;
-  width: 240px;
-  height: 2px;
-  background: #283645;
-  outline: none;
-  opacity: 1;
+.upload__instrument-crop-tablet,
+.upload__instrument-contrast-tablet,
+.upload__instrument-fill-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: @white;
-  border: 2px solid @pink;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-.slider::-webkit-slider-thumb:hover {
-  background: @pink;
-}
-
-.upload-button-wrapper {
+.upload__button-wrapper {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 300px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 410px;
+  }
 }
 
-.upload-button-post {
+.upload__button-post {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
@@ -86,9 +152,18 @@
   cursor: pointer;
   width: 280px;
   height: 55px;
+  @media (min-width: @tablet-width) {
+    width: 260px;
+    height: 55px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 166px;
+    width: 183px;
+    height: 55px;
+  }
 }
 
-.upload-button-cancel {
+.upload__button-cancel {
   margin-top: 12px;
   margin-bottom: 41px;
   font-family: "Open Sans";
@@ -108,9 +183,18 @@
   cursor: pointer;
   width: 280px;
   height: 55px;
+  @media (min-width: @tablet-width) {
+    width: 260px;
+    height: 55px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 166px;
+    width: 183px;
+    height: 55px;
+  }
 }
 
-.upload-button-cancel:hover {
+.upload__button-cancel:hover {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
@@ -128,4 +212,12 @@
   width: 280px;
   height: 55px;
   opacity: 1;
+  @media (min-width: @tablet-width) {
+    width: 260px;
+    height: 55px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 183px;
+    height: 55px;
+  }
 }

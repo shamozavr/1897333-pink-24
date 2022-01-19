@@ -1,12 +1,29 @@
 .os-list {
+  margin-top: 32px; /*почему не применяется*/
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  @media (min-width: @tablet-width) {
+    margin-top: 46px;
+    justify-content: flex-start;
+    margin-left: 23px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 52px;
+    justify-content: flex-start;
+    margin-left: 120px;
+  }
 }
 
 .os-list__item {
-  margin-top: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 35px;
+  }
 }

@@ -1,5 +1,12 @@
 .achievements {
-  background: @lightgrey
+  background: @lightgrey;
+}
+
+/*не работает*/
+#achievements {
+  @media (min-width: @tablet-width) {
+    order: 6;
+  }
 }
 
 
@@ -16,7 +23,7 @@ justify-content: center;
 align-items: center;
 text-align: center;
 text-transform: uppercase;
-color: #pink;
+color: @pink;
 }
 
 .achievements__check-list {
