@@ -1,6 +1,17 @@
 .advantages {
   position: relative;
   height: 828px;
+  background-color: @lightgrey;
+  &::before {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 40px;
+    background-color: @lightgrey;
+    left: 0;
+    top: -40px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  }
 
   @media (min-width: @tablet-width) {
     height: 695px;
@@ -13,21 +24,7 @@
 }
 
 .advantages__wrapper {
-  padding-top: 129px;
   height: 828px;
-  position: absolute;
-  background-image: url("../../img/main_page/phone/grey-background.svg");
-  background-repeat: no-repeat;
-
-  @media (min-width: @tablet-width) {
-    background-image: url("../../img/main_page/tablet/grey-background.svg");
-    background-repeat: no-repeat;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-image: url("../../img/main_page/desktop/grey-background.svg");
-    background-repeat: no-repeat;
-  }
 }
 
 .advantages__title {
@@ -77,6 +74,8 @@
   padding-top: calc(48px - 43px);
   display: flex;
   justify-content: center;
+  position: relative;
+  bottom: -100px;
 
   @media (min-width: @tablet-width) {
     position: absolute;

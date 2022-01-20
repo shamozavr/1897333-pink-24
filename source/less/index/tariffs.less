@@ -1,28 +1,44 @@
 .tariffs-wrapper {
-  position: relative;
-  background-image: url("../../img/main_page/tablet/grey-background-tariffs.svg");
-  background-repeat: no-repeat;
+  position: relative;/*
+  background-image: url("../../img/main_page/grey-background-tariffs.svg");
+  background-repeat: no-repeat;*/
   display: flex;
   justify-items: center;
-  height: 506px;
-  width: 1214px;
+  background-color: @lightgrey;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+  &::before {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 27px;
+    background-color: @lightgrey;
+    left: 0;
+    top: -27px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {/*
+    background-image: url("../../img/main_page/tablet/grey-background-tariffs.svg");*/
     height: 534px;
     width: 1200px;
   }
 
-  @media (min-width: @desktop-width) {
-    background-image: url("../../img/main_page/desktop/grey-background.svg");
-    background-repeat: no-repeat;
+  @media (min-width: @desktop-width) {/*
+    background-image: url("../../img/main_page/desktop/grey-background-tariffs.svg");
+    background-repeat: no-repeat;*/
     height: 534;
     width: 1200px;
   }
 }
 
 .tariffs {
-  width: 616px;
-  height: 216px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(280px * 3);
+  flex-shrink: 0;
   @media (min-width: @tablet-width) {
     width: 616px;
     height: 216px;
