@@ -7,18 +7,21 @@
   background-repeat: no-repeat;
   background-image: url("../../img/main_page/back-mobile.png");
   height: 462px;
+  width: 320px;
   display: flex;
   justify-content: center;
   background-position: center;
 
   @media (min-width: @tablet-width) {
     height: 729px;
+    width: 660px;
     background-image: url("../../img/main_page/back-tablet.png");
     justify-content: flex-start;
   }
 
   @media (min-width: @desktop-width) {
     height: 853px;
+    width: 1200px;
     background-image: url("../../img/main_page/back-desktop.png");
   }
 }
@@ -30,6 +33,7 @@
   bottom: 0;
   height: 286px;
   width: 320px;
+
   @media (min-width: @tablet-width) {
     content: url("../../img/main_page/tablet/hand-tablet.png");
     display: block;
@@ -38,6 +42,7 @@
     height: 545px;
     width: 660px;
   }
+
   @media (min-width: @desktop-width) {
     content: url("../../img/main_page/desktop/hand-desktop.png");
     display: block;
@@ -51,7 +56,7 @@
 .intro {
   width: 280px;
   height: 47px;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
@@ -62,12 +67,13 @@
   margin: 0;
   padding: 0;
   margin-top: 95px;
+
   @media (min-width: @tablet-width) {
     width: 200px; /*-50px с каждой стороны чтобы было 3 строки*/
     height: 127px;
     margin-left: calc(20px + 50px);
     margin-top: 212px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 40px;
@@ -83,7 +89,7 @@
     width: 300px;
     margin-left: 120px;
     margin-top: 212px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 50px;
@@ -94,5 +100,3 @@
     color: @white;
   }
 }
-
-
