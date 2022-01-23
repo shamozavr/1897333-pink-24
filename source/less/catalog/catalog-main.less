@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: @desktop-width) {
+  }
+
+  @media (min-width: @desktop-width) {
+  }
 }
 
 .catalog-main__header-wrapper {
@@ -9,22 +15,24 @@
   min-width: 100%;
   margin: 0;
   color: #000000;
-  background-color: @lightgrey;
+  background-color: #163040;
   flex-grow: 1;
   position: relative;
   background-repeat: no-repeat;
   background-image: url("../../img/main_page/back-mobile.png");
-  height: 462px;
+  background-position: center;
+  background-size: cover;
+  height: 237px;
   display: flex;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
-    height: 729px;
+    height: 440px;
     background-image: url("../../img/main_page/back-tablet.png");
   }
 
   @media (min-width: @desktop-width) {
-    height: 853px;
+    height: 394px;
     background-image: url("../../img/main_page/back-desktop.png");
   }
 }

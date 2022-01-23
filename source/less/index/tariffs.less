@@ -1,6 +1,21 @@
 .tariffs__wrapper-wrapper {
+  position: relative;
   width: 320px;
   margin-top: 40px;
+  background-color: @lightgrey;
+  padding-bottom: 46px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 40px;
+    background-color: @lightgrey;
+    left: 0;
+    top: -40px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    z-index: 100;
+  }
 
   @media (min-width: @tablet-width) {
     width: 660px;
@@ -15,22 +30,9 @@
   position: relative;
   display: flex;
   justify-items: center;
-  background-color: @lightgrey;
   padding-top: 100px;
   padding-bottom: 100px;
   overflow-x: hidden;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 40px;
-    background-color: @lightgrey;
-    left: 0;
-    top: -40px;
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    z-index: 100;
-  }
 }
 
 .tariffs {
@@ -82,6 +84,30 @@
   }
 }
 
+.tariffs__title--hit {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    left: -45px;
+    top: 15px;
+    width: 100%;
+    transform: rotate(-45deg);
+    position: absolute;
+    content: "ХИТ";
+    background-color: @pink;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: @white;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .tariffs__price {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -130,35 +156,6 @@
   }
 }
 
-.tariffs__hit {
-  width: 74px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: @white;
-  transform: rotate(-45deg);
-
-  &::before {
-    height: 65px;
-    transform: rotate(45deg);
-    position: absolute;
-    content: "";
-    width: 100%;
-    background-color: @pink;
-    left: -4px;
-    clip-path: polygon(50% 0, 100% 0, 0 100%, 0 50%);
-  }
-}
-
 .tariffs__cell-wrapper {
   display: flex;
   justify-content: space-between;
@@ -200,11 +197,11 @@
 }
 
 .tariffs__slider-toggles {
+  width: 68px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  background-color: @lightgrey;
-  margin: 0;
-  padding: 0 130px 20px 130px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: none;

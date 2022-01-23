@@ -5,6 +5,10 @@
   margin-top: 20px;
 }
 
+.card--panorama {
+  width: 100%;
+}
+
 .card:first-child {
   margin-top: 0;
 }
@@ -12,7 +16,8 @@
 .card__photo-container {
   position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  width: 100%;
 }
 
 .card__photo-mobile {
@@ -27,6 +32,11 @@
   }
 }
 
+.card__photo-mobile--panorama {
+  width: 100%;
+  object-fit: contain;
+}
+
 .card__photo-tablet {
   display: none;
 
@@ -37,6 +47,11 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
+}
+
+.card__photo-tablet--panorama {
+  width: 100%;
+  object-fit: contain;
 }
 
 .card__photo-desktop {
@@ -51,10 +66,13 @@
   }
 }
 
+.card__photo-desktop--panorama {
+  width: 100%;
+  object-fit: contain;
+}
+
 .card__photo-tag {
   position: absolute;
-  width: 140px;
-  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,9 +85,9 @@
   color: @white;
   text-transform: uppercase;
   background: @pink;
-  margin-right: 20px;
-  margin-top: 0;
-  padding: 0;
+  margin: 0;
+  right: 20px;
+  padding: 7px 20px;
 
   @media (min-width: @tablet-width) {
     margin-top: 57px;
