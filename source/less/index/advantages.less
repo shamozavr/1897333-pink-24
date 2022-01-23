@@ -19,12 +19,67 @@
 
   @media (min-width: @tablet-width) {
     width: 660px;
+    margin-top: 76px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1200px;
   }
 }
+
+.advantages__wrapper-wrapper {
+  padding-top: 53px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 184px 0 184px;
+  }
+}
+
+.advantages__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+}
+
+.advantages__wrapper-phone {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 186px;
+    height: 382px;
+  }
+}
+
+.advantages__wrapper-phone-screen {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    width: 165px;
+    height: 294px;
+    bottom: 140px;
+  }
+}
+
 
 .advantages__title {
   margin: 0;
@@ -43,6 +98,11 @@
     padding-left: 330px;
     width: 310px;
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -64,24 +124,37 @@
   @media (min-width: @tablet-width) {
     padding-left: 330px;
     padding-right: 20px;
+    padding-top: 15px;
     width: 310px;
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
   }
 }
 
 .advantages-phone-image__wrapper-phone {
-  padding-top: calc(48px - 43px);
   display: flex;
   justify-content: center;
   position: relative;
+  margin-top: -100px;
   bottom: -100px;
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    left: 35px;
-    top: 450px; /*magic numbers*/
     display: none;
   }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.advantages-phone-image__screen {
+  position: absolute;
+  top: 36px;
+  left: 91px;
 }
 
 .advantages-phone-image__wrapper-tablet {
@@ -90,6 +163,10 @@
   @media (min-width: @tablet-width) {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }

@@ -17,15 +17,16 @@
 
   @media (min-width: @desktop-width) {
     width: 1200px;
+    display: flex;
+    align-items: center;
   }
 }
 
 
 .page-header__logo-mobile {
   position: absolute;
-  margin-left: 20px;
-  margin-top: 20px;
-  z-index: 1;
+  padding-left: 20px;
+  padding-top: 20px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -40,8 +41,8 @@
   display: none;
 
   @media (min-width: @tablet-width) {
-    margin-top: 27px;
-    margin-left: 20px;
+    padding-top: 27px;
+    padding-left: 20px;
     display: block;
   }
 
@@ -58,8 +59,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
     display: block;
-    margin-top: 27px;
-    margin-left: 130px;
+    padding: 27px 0 43px 130px;
   }
 }
