@@ -9,8 +9,8 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
-    <div class="page-header__logo-wrapper">
+  <header class="page-header page-header--opened page-header--nojs">
+    <div class="page-header__wrapper">
       <a href="index.html">
         <svg class="page-header__logo-mobile" width="74" height="23" viewBox="0 0 74 23" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -78,13 +78,12 @@
             d="M10.785 33.6407C10.056 33.6355 9.35856 33.3471 8.84491 32.8384C8.33126 32.3298 8.04302 31.6421 8.04303 30.9253C8.04304 31.6438 7.75342 32.333 7.2376 32.8419C6.72178 33.3508 6.02182 33.6381 5.29102 33.6407C6.02182 33.6433 6.72178 33.9305 7.2376 34.4395C7.75342 34.9484 8.04304 35.6376 8.04303 36.356C8.04302 35.6393 8.33126 34.9516 8.84491 34.4429C9.35856 33.9343 10.056 33.6459 10.785 33.6407Z"
             fill="#D22856" />
         </svg>
-
       </a>
-    </div>
-    <nav class="main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button">
+      <button class="page-header__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
+    </div>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__list-item">
@@ -113,30 +112,34 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Приложение Пинк - Взяглните на мир иначе</h1>
-    <div class="intro__wrapper">
-      <h2 class="intro caption">Взгляните на жизнь иначе!</h2>
+    <div class="intro">
+      <div class="intro__wrapper">
+        <h2 class="intro__caption">Взгляните на жизнь иначе!</h2>
+      </div>
       <div class="download">
-        <div class="download__button-wrapper">
-          <a class="download__button" href="####www.appstore.com">Скачать приложение</a>
+        <div class="download__wrapper">
+          <div class="download__button-wrapper">
+            <a class="download__button" href="####www.appstore.com">Скачать приложение</a>
+          </div>
+          <ul class="os-list">
+            <li class="os-list__item">
+              <img class="os-list__item-logo" src="img/apple-logo.png" width="47" srcset="img/apple-logo@2x.png 2x"
+                alt="логотип Apple">
+              <a class="os-list__item-link visually-hidden">ссылка на appstore</a>
+            </li>
+            <li class="os-list__item">
+              <img class="os-list__item-logo" src="img/android-logo.png" width="43" srcset="img/android-logo@2x.png"
+                alt="логотип Android">
+              <a class="os-list__item-link visually-hidden">ссылка на Play Market</a>
+            </li>
+            <li class="os-list__item">
+              <img class="os-list__item-logo" src="img/microsoft-logo.png" width="44" srcset="img/microsoft-logo@2x.png"
+                alt="логотип Windows Store">
+              <a class="os-list__item-link visually-hidden">ссылка на Windows Store></a>
+            </li>
+          </ul>
+          <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
-        <ul class="os-list">
-          <li class="os-list__item">
-            <img class="os-list__item-logo" src="img/apple-logo.png" width="47" srcset="img/apple-logo@2x.png 2x"
-              alt="логотип Apple">
-            <a class="os-list__item-link visually-hidden">ссылка на appstore</a>
-          </li>
-          <li class="os-list__item">
-            <img class="os-list__item-logo" src="img/android-logo.png" width="43" srcset="img/android-logo@2x.png"
-              alt="логотип Android">
-            <a class="os-list__item-link visually-hidden">ссылка на Play Market</a>
-          </li>
-          <li class="os-list__item">
-            <img class="os-list__item-logo" src="img/microsoft-logo.png" width="44" srcset="img/microsoft-logo@2x.png"
-              alt="логотип Windows Store">
-            <a class="os-list__item-link visually-hidden">ссылка на Windows Store></a>
-          </li>
-        </ul>
-        <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
     </div>
     <div class="solution">
@@ -346,6 +349,7 @@
       <img class="footer__promo-logo" src="img/html-academy.svg" alt="логотип академии">
     </div>
   </footer>
+  <script></script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 .download {
   background-color: #1d2631;
   position: relative;
-  width: 320px;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     background: none;
@@ -13,8 +13,20 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 400px;
     background: none;
+  }
+}
+
+.download__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
   }
 }
 
