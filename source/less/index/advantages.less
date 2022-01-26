@@ -4,7 +4,16 @@
   width: 320px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  background-image: url("../../img/mobile-phone.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 300px;
+  margin: 67px 0 -36px 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/mobile-phone@2x.png");
+  }
 
   &::before {
     position: absolute;
@@ -18,155 +27,127 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 40px 0 40px 0;
+    justify-content: center;
     width: 660px;
-    margin-top: 76px;
+    align-items: flex-end;
+    background-image: url("../../img/tablet-phone.png");
+    background-position: left;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/tablet-phone@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 1200px;
-  }
-}
-
-.advantages__wrapper-wrapper {
-  padding-top: 53px;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 20px;
-  }
-
-  @media (min-width: @tablet-width) {
-    display: flex;
+    background-image: none;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0 184px 0 184px;
+    justify-content: space-evenly;
   }
 }
 
-.advantages__wrapper {
+.advantages__list {
+  list-style: none;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 20px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    padding: 0;
+  }
+}
+
+.advantages__list-item {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 43px;
+
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    align-items: center;
+    padding-top: 300px;
+    background-color: @lightgrey;
+
+    &:nth-of-type(1) {
+      background-image: url("../../img/desktop-phone-1.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/desktop-phone-1@2x.png");
+      }
+    }
+
+    &:nth-of-type(2) {
+      background-image: url("../../img/desktop-phone-2.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/desktop-phone-2@2x.png");
+      }
+    }
+
+    &:nth-of-type(3) {
+      background-image: url("../../img/desktop-phone-3.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/desktop-phone-3@2x.png");
+      }
+    }
   }
 }
 
-.advantages__wrapper-phone {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @tablet-width) {
-    display: block;
-    width: 186px;
-    height: 382px;
-  }
-}
-
-.advantages__wrapper-phone-screen {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @tablet-width) {
-    display: block;
-    position: absolute;
-    width: 165px;
-    height: 294px;
-    bottom: 140px;
-  }
-}
-
-
-.advantages__title {
+.advantages__list-item-header {
   margin: 0;
-  position: relative;
+  padding: 0;
+  padding-bottom: 24px;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   color: #000000;
 
   @media (min-width: @tablet-width) {
-    padding-left: 330px;
-    width: 310px;
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
-    margin: 0;
+    text-align: center;
+    background-color: @lightgrey;
+    width: 300px;
   }
 }
 
-.advantages__description {
+.advantages__list-item-description {
   margin: 0;
-  padding-top: 24px;
-  padding-bottom: 43px;
-  position: relative;
+  padding: 0;
+  width: 280px;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   color: #283645;
 
   @media (min-width: @tablet-width) {
-    padding-left: 330px;
-    padding-right: 20px;
-    padding-top: 15px;
-    width: 310px;
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-.advantages-phone-image__wrapper-phone {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin-top: -100px;
-  bottom: -100px;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.advantages-phone-image__screen {
-  position: absolute;
-  top: 36px;
-  left: 91px;
-}
-
-.advantages-phone-image__wrapper-tablet {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-    position: absolute;
-    bottom: -67px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
+    text-align: center;
+    background-color: @lightgrey;
   }
 }

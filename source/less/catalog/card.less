@@ -2,7 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+
+  @media (min-width: @desktop-width) {
+  }
+}
+
+.card__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
 }
 
 .card--panorama {
@@ -10,7 +26,6 @@
 }
 
 .card:first-child {
-  margin-top: 0;
 }
 
 .card__photo-container {
@@ -85,12 +100,10 @@
   color: @white;
   text-transform: uppercase;
   background: @pink;
-  margin: 0;
   right: 20px;
-  padding: 7px 20px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 57px;
+    top: 57px;
   }
 }
 
@@ -99,6 +112,8 @@
   background: @lightgrey;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
     width: 300px;
     height: 121px;
   }
@@ -108,8 +123,6 @@
   height: 10px;
   display: flex;
   align-items: center;
-  margin-top: 25px;
-  margin-left: 17px;
 }
 
 .card__post-author {
@@ -122,12 +135,9 @@
   align-items: center;
   text-align: center;
   color: #283645;
-  margin: 0;
-  padding: 0;
 }
 
 .card__post-time {
-  margin-left: 3px;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -140,15 +150,8 @@
 }
 
 .card__post-description-wrapper {
-  margin-left: 17px;
-  margin-right: 10px;
-  margin-top: 14px;
 
   @media (min-width: @tablet-width) {
-    &:not(:first-of-type) {
-      width: 300px;
-      height: 155px;
-    }
   }
 }
 
@@ -161,31 +164,18 @@
   display: flex;
   align-items: center;
   color: #283645;
-  margin: 0;
-  padding: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
 }
 
 .card__post-footer {
   height: 12px;
   display: flex;
   align-items: center;
-  margin-left: 17px;
-  margin-top: 23px;
-  margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 170px;
-    margin-top: -180px;
   }
 }
 
 .card__post-heart {
-  margin: 0;
-  padding: 0;
 
   @media (min-width: @tablet-width) {
     order: 3;
@@ -207,11 +197,7 @@
 }
 
 .card__post-liked {
-  margin-left: 18px;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .card__post-liked-counter {
-  margin-left: 2px;
 }

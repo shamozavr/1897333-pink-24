@@ -1,6 +1,7 @@
 .upload {
   background-color: @lightgrey;
   width: 320px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -18,16 +19,19 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 940px;
-    justify-self: center;
+    height: 514px;
   }
 }
 
-.upload__photo--wrapper {
+.upload__photo-wrapper {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    margin: 0;
+    padding: 0;
     width: 300px;
   }
 }
@@ -67,12 +71,7 @@
   flex-wrap: wrap;
   margin-top: 42px;
   align-items: center;
-  /*
-  :nth-child(2) {
-    order: 6;
-    flex-basis: 100%;
-  }
-*/
+
   @media (min-width: @tablet-width) {
     width: 253px;
     display: flex;
@@ -80,11 +79,8 @@
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    /*
-    :nth-child(2) {
-      order: 1;
-    }*/
   }
+
   @media (min-width: @desktop-width) {
     width: 380px;
     display: flex;
@@ -130,6 +126,7 @@
   @media (min-width: @tablet-width) {
     padding-left: 300px;
   }
+
   @media (min-width: @desktop-width) {
     width: 410px;
   }
@@ -152,10 +149,12 @@
   cursor: pointer;
   width: 280px;
   height: 55px;
+
   @media (min-width: @tablet-width) {
     width: 260px;
     height: 55px;
   }
+
   @media (min-width: @desktop-width) {
     margin-top: 166px;
     width: 183px;
@@ -183,10 +182,12 @@
   cursor: pointer;
   width: 280px;
   height: 55px;
+
   @media (min-width: @tablet-width) {
     width: 260px;
     height: 55px;
   }
+
   @media (min-width: @desktop-width) {
     margin-top: 166px;
     width: 183px;
@@ -212,10 +213,12 @@
   width: 280px;
   height: 55px;
   opacity: 1;
+
   @media (min-width: @tablet-width) {
     width: 260px;
     height: 55px;
   }
+
   @media (min-width: @desktop-width) {
     width: 183px;
     height: 55px;

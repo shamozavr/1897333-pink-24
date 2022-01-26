@@ -1,61 +1,83 @@
 .intro__wrapper {
+  width: 100%;
+  object-fit: contain;
   margin: 0;
   color: #000000;
-  background-color: @lightgrey;
+  background-color: #163040;
   flex-grow: 1;
   position: relative;
   background-repeat: no-repeat;
-  background-image: url("../../img/main_page/back-mobile.png");
-  height: 462px;
-  width: 320px;
-  display: flex;
-  justify-content: center;
+  background-image: url("../../img/back-mobile.jpg");
   background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/back-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
-    height: 729px;
     width: 660px;
-    background-image: url("../../img/main_page/back-tablet.png");
-    justify-content: flex-start;
+    height: 729px;
+    background-image: url("../../img/back-tablet.jpg");
+    align-items: flex-start;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
+    width: 1050px;
     height: 853px;
-    width: 1200px;
-    background-image: url("../../img/main_page/back-desktop.png");
+    background-image: url("../../img/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-desktop@2x.jpg");
+    }
   }
 }
 
 .intro__wrapper::after {
-  content: url("../../img/main_page/phone.png");
+  content: url("../../img/mobile-hand.png");
   display: block;
   position: absolute;
   bottom: 0;
-  height: 286px;
-  width: 320px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/mobile-hand@2x.png");
+  }
 
   @media (min-width: @tablet-width) {
-    content: url("../../img/main_page/tablet/hand-tablet.png");
+    content: url("../../img/tablet-hand.png");
     display: block;
     position: absolute;
     bottom: 0;
     height: 545px;
     width: 660px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/tablet-hand@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
-    content: url("../../img/main_page/desktop/hand-desktop.png");
+    content: url("../../img/desktop-hand@2x.png");
     display: block;
     position: absolute;
     bottom: 0;
     height: 645px;
-    width: 1050px;
+    width: 1200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/desktop-hand@2x.png");
+    }
   }
 }
 
 .intro {
-  width: 280px;
-  height: 47px;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
