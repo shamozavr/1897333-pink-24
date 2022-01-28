@@ -1,22 +1,65 @@
 .achievements {
-  background: @lightgrey;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: @lightgrey;
 }
 
 .achievements__title {
-  position: relative;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
   color: @pink;
 }
 
-.achievements__check-list {
-  list-style: none;
+.achievements__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievements__wrapper-label {
+  padding: 20px;
+}
+
+.achievements__wrapper-input {
+  position: absolute;
+  clip-path: circle(0);
+}
+
+.achievements__wrapper-input:checked + span::before {
+  background-image: url("../../img/tick.svg");
+  background-repeat: no-repeat;
+}
+
+.achievements__wrapper-text {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 45px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  align-items: center;
+  color: #283645;
+}
+
+.achievements__wrapper-text::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  background: @white;
+  border-radius: 1px;
 }

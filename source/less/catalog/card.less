@@ -2,8 +2,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+
+  &--panorama {
+    width: 100%;
+    padding-top: 0;
+  }
 
   @media (min-width: @desktop-width) {
+    padding-top: 50px;
+
+    &--panorama {
+      width: 100%;
+      padding-top: 0;
+    }
   }
 }
 
@@ -12,20 +24,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     width: 620px;
   }
 
   @media (min-width: @desktop-width) {
     width: 940px;
   }
-}
-
-.card--panorama {
-  width: 100%;
-}
-
-.card:first-child {
 }
 
 .card__photo-container {
@@ -38,6 +42,11 @@
 .card__photo-mobile {
   display: flex;
 
+  &--panorama {
+    width: 100%;
+    object-fit: contain;
+  }
+
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -45,11 +54,6 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
-}
-
-.card__photo-mobile--panorama {
-  width: 100%;
-  object-fit: contain;
 }
 
 .card__photo-tablet {
@@ -57,16 +61,16 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+
+    &--panorama {
+      width: 100%;
+      object-fit: contain;
+    }
   }
 
   @media (min-width: @desktop-width) {
     display: none;
   }
-}
-
-.card__photo-tablet--panorama {
-  width: 100%;
-  object-fit: contain;
 }
 
 .card__photo-desktop {
@@ -78,15 +82,17 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
+
+    &--panorama {
+      width: 100%;
+      object-fit: contain;
+    }
   }
 }
 
-.card__photo-desktop--panorama {
-  width: 100%;
-  object-fit: contain;
-}
-
 .card__photo-tag {
+  margin: 0;
+  padding: 14px 20px;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -96,7 +102,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
-  line-height: 24px;
+  line-height: 9px;
   color: @white;
   text-transform: uppercase;
   background: @pink;
@@ -105,27 +111,54 @@
   @media (min-width: @tablet-width) {
     top: 57px;
   }
+
+  @media (min-width: @desktop-width) {
+    right: 130px;
+  }
 }
 
 .card__post {
   width: 280px;
   background: @lightgrey;
 
+  &--panorama {
+    width: 100%;
+  }
+
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
     width: 300px;
-    height: 121px;
+    height: 155px;
+
+    &--panorama {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
 .card__post-header {
-  height: 10px;
+  padding-top: 25px;
+  padding-left: 17px;
   display: flex;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    &--panorama {
+      padding: 30px 0 14px 30px;
+      margin: 0;
+      order: -2;
+    }
+  }
 }
 
 .card__post-author {
+  margin: 0;
+  padding-right: 3px;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -138,6 +171,8 @@
 }
 
 .card__post-time {
+  margin: 0;
+  padding: 0;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -152,10 +187,14 @@
 .card__post-description-wrapper {
 
   @media (min-width: @tablet-width) {
+
   }
 }
 
 .card__post-description {
+  padding-top: 14px;
+  padding-left: 17px;
+  margin: 0;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -164,26 +203,47 @@
   display: flex;
   align-items: center;
   color: #283645;
+
+  @media (min-width: @tablet-width) {
+    height: 34px;
+    &--panorama {
+      padding: 0 0 32px 30px;
+    }
+  }
+
 }
 
 .card__post-footer {
-  height: 12px;
+  margin: 0;
+  padding: 23px 0 25px 17px;
   display: flex;
   align-items: center;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+
+    &--panorama {
+      padding: 30px 30px 14px 0;
+      order: -1;
+    }
   }
 }
 
 .card__post-heart {
-
+  padding-right: 18px;
   @media (min-width: @tablet-width) {
-    order: 3;
+    order: 1;
+    margin-left: auto;
+    margin-right: 0;
+    &--panorama {
+      padding-left: 16px;
+    }
   }
 }
 
-.card__post-liked,
-.card__post-liked-counter {
+.card__post-liked {
+  margin: 0;
+  padding-right: 3px;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -196,8 +256,16 @@
   color: @pink;
 }
 
-.card__post-liked {
-}
-
 .card__post-liked-counter {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  text-transform: uppercase;
+  color: @pink;
 }

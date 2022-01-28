@@ -9,7 +9,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header page-header--opened page-header--nojs">
+  <header class="page-header page-header--closed page-header--nojs">
     <div class="page-header__wrapper">
       <a href="index.html">
         <svg class="page-header__logo-mobile" width="74" height="23" viewBox="0 0 74 23" fill="none"
@@ -83,7 +83,7 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </div>
-    <nav class="main-nav main-nav--closed main-nav--nojs">
+    <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__list-item">
@@ -349,7 +349,22 @@
       <img class="footer__promo-logo" src="img/html-academy.svg" alt="логотип академии">
     </div>
   </footer>
-  <script></script>
+  <script>
+    var pageHeader = document.querySelector('.page-header');
+    var pageHeaderToggle = document.querySelector('.page-header__toggle');
+
+    pageHeader.classList.remove('page-header--nojs')
+
+    pageHeaderToggle.addEventListener('click', function () {
+      if (pageHeader.classList.contains('page-header--closed')) {
+        pageHeader.classList.remove('page-header--closed');
+        pageHeader.classList.add('page-header--opened');
+      } else {
+        pageHeader.classList.add('page-header--closed');
+        pageHeader.classList.remove('page-header--opened');
+      }
+    })
+  </script>
 </body>
 
 </html>
