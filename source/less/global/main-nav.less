@@ -1,6 +1,7 @@
 .main-nav {
   min-height: 63px;
   width: 100%;
+
   .page-header--closed & {
     display: none;
   }
@@ -10,7 +11,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: block;
+    .page-header--closed & {
+      display: flex;
+    }
   }
 }
 

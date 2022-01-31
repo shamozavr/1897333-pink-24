@@ -1,3 +1,18 @@
+.form-contacts {
+  text-transform: uppercase;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 616px;
+    height: 306px;
+    border: 2px solid @grey;
+    border-radius: 1px;
+  }
+}
+
 .form-contacts__header {
   display: none;
 
@@ -17,20 +32,6 @@
     padding: 0;
     margin-top: -18px;
     background-color: @white;
-  }
-}
-
-.form-contacts {
-  text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 616px;
-    height: 306px;
-    border: 2px solid @grey;
-    border-radius: 1px;
   }
 }
 

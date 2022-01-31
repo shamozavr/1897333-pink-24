@@ -6,6 +6,7 @@
   left: 0;
   z-index: 1;
   width: 100%;
+
   &--opened {
     background-color: #283645;
   }
@@ -78,6 +79,10 @@
   background: transparent;
   cursor: pointer;
   border: none;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .page-header--closed .page-header__toggle::before {

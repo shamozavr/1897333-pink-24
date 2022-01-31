@@ -39,16 +39,15 @@
 
 .intro__wrapper {
   width: 280px;
-  margin: 0 auto;
-  z-index: 1;
+  padding-top: 95px;
 
   @media (min-width: @tablet-width) {
     width: 620px;
+    padding-top: 212px;
   }
 
   @media (min-width: @desktop-width) {
     width: 940px;
-    margin-left: 0;
   }
 }
 
@@ -56,7 +55,7 @@
   content: url("../../img/mobile-hand.png");
   display: block;
   position: absolute;
-  bottom: 250px;
+  bottom: 289px;
   z-index: 0;
 
   @media (min-resolution: 2dppx) {
@@ -102,15 +101,10 @@
   text-align: center;
   margin: 0;
   padding: 0;
-  margin-top: 95px;
-  margin-bottom: 320px;
 
   @media (min-width: @tablet-width) {
+    padding-left: 55px;
     width: 200px; /*-50px с каждой стороны чтобы было 3 строки*/
-    height: 127px;
-    margin-left: calc(20px + 50px);
-    margin-top: 212px;
-    margin-bottom: 0;
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -123,10 +117,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: 174px;
+    padding-left: 0;
     width: 300px;
-    margin-left: 120px;
-    margin-top: 212px;
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 300;
