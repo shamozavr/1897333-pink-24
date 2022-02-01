@@ -1,8 +1,17 @@
 .feedback {
   border: none;
+  margin: 0;
+  padding: 40px 0 0;
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+    padding: 47px 0 53px;
+    border: 2px solid #E5E5E5;
+    border-radius: 1px;
+  }
 }
 
-.feedback-header {
+.feedback__header {
   position: relative;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -15,16 +24,17 @@
   text-transform: uppercase;
   color: @pink;
   justify-content: center;
+  padding-bottom: 16px;
 }
 
-input[type="text"],
-select,
-textarea {
+.feedback__field {
+  width: 276px;
+  height: 200px;
+  margin: 0 auto;
   position: relative;
-  width: calc(276px - 20px);
-  margin-left: 20px;
+  resize: none;
   padding-left: 20px;
-  height: 197px;
+  padding-top: 14px;
   border: 2px solid #e5e5e5;
   border-radius: 1px;
   font-family: "Open Sans", sans-serif;
@@ -36,6 +46,17 @@ textarea {
   justify-content: center;
   align-items: center;
   color: #283645;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 496px;
+  }
+}
+
+.feedback__send-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
 }
 
 .feedback__send {
@@ -51,8 +72,7 @@ textarea {
   background: #2aab6d;
   border: 2px solid #2aab6d;
   border-radius: 1px;
-  margin-top: 52px;
-  padding: 23px 45px;
+  padding: 14px 45px;
   cursor: pointer;
 
   &:hover {
@@ -62,7 +82,7 @@ textarea {
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3)
+    color: rgba(255, 255, 255, 0.3);
   }
 
   &:disabled {
@@ -73,9 +93,10 @@ textarea {
   }
 }
 
-.feedback__send-wrapper {
+.feedback__note-wrapper {
   display: flex;
   justify-content: center;
+  padding-top: 34px;
 }
 
 .feedback__note-asterisk {
@@ -89,11 +110,8 @@ textarea {
   align-items: center;
   text-transform: uppercase;
   color: @pink;
-}
-
-.feedback__note-wrapper {
-  display: flex;
-  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .feedback__note {
@@ -107,4 +125,6 @@ textarea {
   align-items: center;
   text-transform: uppercase;
   color: #000000;
+  padding: 0;
+  margin: 0;
 }
