@@ -105,6 +105,18 @@
     color: @white;
     margin: 0;
     padding: 0;
+
+    @media (min-width: @tablet-width) {
+      line-height: 15px;
+      left: -52px;
+      top: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      line-height: 30px;
+      left: -90px;
+      top: 15px;
+      }
   }
 }
 
@@ -193,6 +205,14 @@
 
   @media (min-width: @desktop-width) {
     display: none;
+  }
+}
+
+.tariffs__cell-img {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

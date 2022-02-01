@@ -54,6 +54,23 @@ textarea {
   margin-top: 52px;
   padding: 23px 45px;
   cursor: pointer;
+
+  &:hover {
+    background: #1C9B5E;
+    border: 2px solid #1C9B5E;
+    border-radius: 1px;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3)
+  }
+
+  &:disabled {
+    color: @white;
+    background: #E5E5E5;
+    border: 2px solid #E5E5E5;
+    border-radius: 1px;
+  }
 }
 
 .feedback__send-wrapper {

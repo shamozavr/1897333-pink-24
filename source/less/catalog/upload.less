@@ -16,11 +16,12 @@
 
 .upload__wrapper {
   @media (min-width: @tablet-width) {
-  width: 620px;
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
+    width: 620px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
   }
+
   @media (min-width: @desktop-width) {
     width: 800px;
   }
@@ -36,6 +37,10 @@
     height: 400px;
     flex-shrink: 0;
     margin-right: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 90px;
   }
 }
 
@@ -109,6 +114,31 @@
       bottom: -30px;
       background: #283645;
       opacity: 0.1;
+
+      @media (min-width: @desktop-width) {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 410px;
+      left: -5px;
+      height: 1px;
+      bottom: -15px;
+      background: #283645;
+      opacity: 0.1;
     }
   }
 }
@@ -122,6 +152,7 @@
   padding-top: 39px;
   position: relative;
   margin-bottom: 73px;
+
   &::after {
     position: absolute;
     content: "";
@@ -146,7 +177,8 @@
   }
 
   @media (min-width: @desktop-width) {
-   margin-bottom: 150px;
+    margin-bottom: 150px;
+    width: 288px;
   }
 }
 
@@ -232,8 +264,9 @@
     color: @white;
     background-color: @pink;
   }
+
   &:active {
-    color: rgba(255, 255, 255, 0.3)
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -271,6 +304,7 @@
     border: 3px solid #283645;
     box-sizing: border-box;
   }
+
   &:active {
     color: @white;
     background: #283645;
@@ -278,8 +312,7 @@
 }
 
 
-
-  /*
+/*
 .upload__photo-wrapper {
   margin-top: 20px;
   display: flex;
