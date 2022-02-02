@@ -6,7 +6,15 @@
   @media (min-width: @tablet-width) {
     order: 5;
     padding: 47px 0 53px;
-    border: 2px solid #E5E5E5;
+    border: 2px solid @grey;
+    border-radius: 1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: 100%;
+    padding: 44px 0 45px;
+    border: 2px solid @grey;
     border-radius: 1px;
   }
 }
@@ -25,6 +33,14 @@
   color: @pink;
   justify-content: center;
   padding-bottom: 16px;
+
+  @media (min-width: @desktop-width) {
+    width: 200px;
+    margin: 0 auto;
+    top: -53px;
+    background-color: @white;
+    padding: 0 38px;
+  }
 }
 
 .feedback__field {
@@ -35,7 +51,7 @@
   resize: none;
   padding-left: 20px;
   padding-top: 14px;
-  border: 2px solid #e5e5e5;
+  border: 2px solid @grey;
   border-radius: 1px;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -51,80 +67,8 @@
   @media (min-width: @tablet-width) {
     width: 496px;
   }
-}
 
-.feedback__send-wrapper {
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-}
-
-.feedback__send {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  color: @white;
-  background: #2aab6d;
-  border: 2px solid #2aab6d;
-  border-radius: 1px;
-  padding: 14px 45px;
-  cursor: pointer;
-
-  &:hover {
-    background: #1C9B5E;
-    border: 2px solid #1C9B5E;
-    border-radius: 1px;
+  @media (min-width: @desktop-width) {
+    width: 816px;
   }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
-
-  &:disabled {
-    color: @white;
-    background: #E5E5E5;
-    border: 2px solid #E5E5E5;
-    border-radius: 1px;
-  }
-}
-
-.feedback__note-wrapper {
-  display: flex;
-  justify-content: center;
-  padding-top: 34px;
-}
-
-.feedback__note-asterisk {
-  position: relative;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 30px;
-  display: inline;
-  align-items: center;
-  text-transform: uppercase;
-  color: @pink;
-  padding: 0;
-  margin: 0;
-}
-
-.feedback__note {
-  position: relative;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 30px;
-  display: inline;
-  align-items: center;
-  text-transform: uppercase;
-  color: #000000;
-  padding: 0;
-  margin: 0;
 }

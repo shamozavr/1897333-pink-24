@@ -41,6 +41,16 @@
 
 .page-header__logo-mobile {
   display: block;
+  color: @white;
+  fill: currentColor;
+
+  &:hover {
+    color: @pink;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -56,6 +66,16 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    color: @white;
+    fill: currentColor;
+
+    &:hover {
+      color: @pink;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -71,7 +91,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: block;
+    color: @white;
+    fill: currentColor;
+
+    &:hover {
+      color: @pink;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
