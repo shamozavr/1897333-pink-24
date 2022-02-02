@@ -13,15 +13,32 @@
 
   @media (min-width: @desktop-width) {
     background-color: @lightgrey;
-    display: flex;
-    width: 1200px;
+    width: 100%;
     margin-bottom: 72px;
+  }
+}
+
+.research__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 131px;
+    width: 940px;
   }
 }
 
 .research-timer__tablet {
   @media (min-width: @tablet-width) {
-    position: absolute;
+    position: relative;
     width: 238px;
     height: 276px;
     padding-top: 54px;
@@ -38,7 +55,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
+    position: relative;
     display: flex;
     width: 298px;
     height: 345px;
@@ -50,7 +67,6 @@
   @media (min-width: @tablet-width) {
     margin: 0;
     padding-top: 102px;
-    padding-left: 330px;
     width: 168px;
     height: 59px;
     font-family: "Open Sans", sans-serif;
@@ -66,7 +82,6 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     padding-top: 115px;
-    padding-left: 500px;
     width: 298px;
     height: 23px;
     font-family: "Open Sans", sans-serif;
@@ -85,7 +100,6 @@
   @media (min-width: @tablet-width) {
     margin: 0;
     padding-top: 24px;
-    padding-left: 330px;
     width: 310px;
     height: 82px;
     font-family: "Open Sans", sans-serif;
@@ -99,7 +113,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 500px;
     width: 534px;
     height: 74px;
     font-family: "Open Sans", sans-serif;
@@ -116,7 +129,6 @@
 .research-link {
   @media (min-width: @tablet-width) {
     padding-top: 24px;
-    padding-left: 330px;
     width: 226px;
     height: 10px;
     font-family: "Open Sans", sans-serif;
@@ -131,7 +143,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 500px;
     width: 290px;
     height: 13px;
     font-family: "Open Sans", sans-serif;
